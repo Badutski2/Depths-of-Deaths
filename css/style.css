@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #eee;
+    margin: 0;
+    padding: 20px;
+}
+
+.screen { display: none; }
+.screen.active { display: block; }
+
+.grid {
+    display: grid;
+    gap: 5px;
+}
+
+#floor-grid {
+    grid-template-columns: repeat(auto-fill, 50px);
+    margin-top: 20px;
+}
+
+.tile {
+    width: 50px;
+    height: 50px;
+    background: #444;
+    border: 1px solid #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.tile.hidden {
+    background: #222;
+    color: #222;
+    cursor: default;
+}
+.tile.completed {
+    opacity: 0.5;
+}
+
+.panel {
+    margin-bottom: 10px;
+    padding: 5px;
+    background: #222;
+}
+
+.grid.abilities {
+    grid-template-columns: repeat(4, 60px);
+    grid-template-rows: repeat(4, 60px);
+    margin-bottom: 10px;
+}
+
+.grid.abilities .slot {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #555;
+}
+
+button {
+    margin-right: 5px;
+    padding: 5px 10px;
+    background: #333;
+    color: #eee;
+    border: 1px solid #555;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
